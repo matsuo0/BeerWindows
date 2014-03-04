@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <view
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        class="com.loopj.android.image.SmartImageView"
+        android:id="@+id/ivIcon"
+        android:src="@drawable/ic_launcher"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="(ペールエール)"
+        android:id="@+id/tvStyle"
+        android:textColor="#996633"
+        android:layout_alignTop="@+id/tvName"
+        android:layout_toRightOf="@+id/tvName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="クラフトビールブリュワリー(東京)"
+        android:textColor="#ff8000"
+        android:id="@+id/tvBrewery"
+        android:layout_above="@+id/tvContent"
+        android:layout_toRightOf="@+id/ivIcon" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#996633"
+        android:text="12番: 東京ペールエール"
+        android:id="@+id/tvName"
+        android:layout_alignTop="@+id/ivIcon"
+        android:layout_alignLeft="@+id/tvBrewery"
+        android:layout_alignStart="@+id/tvBrewery" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFFFFF"
+        android:text="ホップのアロマとモルトの甘さが絶妙なバランスで作られた伝統的なペールエール。１年で２回しか醸造されない超レアビール。なくなったら終わり。"
+        android:id="@+id/tvContent"
+        android:layout_below="@+id/ivIcon"
+        android:layout_alignLeft="@+id/ivIcon"
+        android:layout_alignStart="@+id/ivIcon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginRight= "8dp"
+        android:text="alc.8.0%"
+        android:textColor="#45C8C9"
+        android:id="@+id/tvABV"
+        android:layout_marginTop="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

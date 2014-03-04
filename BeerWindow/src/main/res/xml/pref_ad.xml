@@ -1,0 +1,13 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- スクロールタイミング -->
+    <ListPreference
+        android:key="scroll_ad_frequency"
+        android:title="@string/pref_title_scroll_ad_frequency"
+        android:entries="@array/pref_scroll_frequency_ad_titles"
+        android:entryValues="@array/pref_scroll_frequency_ad_values"
+        android:defaultValue="10"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+</PreferenceScreen>

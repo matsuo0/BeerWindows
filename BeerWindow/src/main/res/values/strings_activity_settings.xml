@@ -1,0 +1,130 @@
+<resources>
+        <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_header_user_info">USER INFO</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact based on your message history</string>
+
+    <string name="pref_title_display_name">ユーザー名</string>
+    <string name="pref_default_display_name">名無し</string>
+
+    <string name="pref_title_pass">パスワード</string>
+    <string name="pref_default_display_pass">password</string>
+
+    <string name="pref_title_twitter_hash">ハッシュタグ設定</string>
+    <string name="pref_default_display_twitter_hash">#craftbeer</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_twitter_frequency">通信リフレッシュタイミング</string>
+    <string-array name="pref_sync_frequency_twitter_titles">
+        <item>1 分</item>
+        <item>5 分</item>
+        <item>10 分</item>
+        <item>20 分</item>
+        <item>30 分</item>
+    </string-array>
+
+    <string-array name="pref_sync_frequency_twitter_values">
+        <item>60000</item>
+        <item>300000</item>
+        <item>600000</item>
+        <item>1200000</item>
+        <item>1800000</item>
+    </string-array>
+
+    <string name="pref_title_scroll_twitter_frequency">スクロールタイミング</string>
+    <string-array name="pref_scroll_frequency_twitter_titles">
+        <item>10 秒</item>
+        <item>30 秒</item>
+        <item>1  分</item>
+        <item>2  分</item>
+        <item>3　分</item>
+    </string-array>
+
+    <string-array name="pref_scroll_frequency_twitter_values">
+        <item>10000</item>
+        <item>30000</item>
+        <item>60000</item>
+        <item>120000</item>
+        <item>180000</item>
+    </string-array>
+
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>900000</item>
+        <item>1800000</item>
+        <item>2700000</item>
+        <item>8100000</item>
+        <item>1620000</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="pref_title_scroll_ad_frequency">スクロールタイミング</string>
+    <string-array name="pref_scroll_frequency_ad_titles">
+        <item>10 秒</item>
+        <item>30 秒</item>
+        <item>1  分</item>
+        <item>2  分</item>
+        <item>3　分</item>
+        <item>スクロールしない</item>
+    </string-array>
+
+    <string-array name="pref_scroll_frequency_ad_values">
+        <item>10000</item>
+        <item>30000</item>
+        <item>60000</item>
+        <item>120000</item>
+        <item>180000</item>
+        <item>-1</item>
+    </string-array>
+
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+    <string name="pref_header_twitter_setting">Twitter 設定</string>
+
+
+    <string name="pref_header_AD">広告 設定</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+
+
+    <string name="topactivity_title">メニュー</string>
+</resources>

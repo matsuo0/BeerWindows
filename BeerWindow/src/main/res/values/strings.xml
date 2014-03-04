@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BeerWindow</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="beer_window">BEER WINDOW</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- 必要に応じて修正する -->
+
+    <string name="twitter_consumer_key">45e8hsbnJn6SdGVN1MUug</string>
+    <string name="twitter_consumer_secret">RnYREQIqbjd5r91w5bvkB8b43PFS59meBEPBSCPwC0</string>
+    <string name="title_activity_twitter_oauth">Twitter認証</string>
+    <string name="twitter_oauth">Twitter認証</string>
+    <string name="twitter_callback_url">tetsu0831://twitter</string>
+    <string name="title_activity_top">TopActivity</string>
+
+</resources>
