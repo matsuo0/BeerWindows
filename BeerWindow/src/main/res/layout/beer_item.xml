@@ -22,7 +22,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="(ペールエール)"
         android:id="@+id/tvStyle"
-        android:textColor="#996633"
+        android:textColor="#0000CD"
         android:layout_alignTop="@+id/tvName"
         android:layout_toRightOf="@+id/tvName" />
 
@@ -31,8 +31,9 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="クラフトビールブリュワリー(東京)"
-        android:textColor="#ff8000"
+        android:textColor="#A52A2A"
         android:id="@+id/tvBrewery"
+        android:layout_marginTop="4dp"
         android:layout_above="@+id/tvContent"
         android:layout_toRightOf="@+id/ivIcon" />
 
@@ -41,12 +42,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#996633"
+        android:textColor="#0000CD"
         android:text="12番: 東京ペールエール"
         android:id="@+id/tvName"
-        android:layout_alignTop="@+id/ivIcon"
-        android:layout_alignLeft="@+id/tvBrewery"
-        android:layout_alignStart="@+id/tvBrewery" />
+        android:layout_alignTop="@+id/tvABV"
+        android:layout_toRightOf="@+id/ivIcon" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -65,7 +65,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_marginRight= "8dp"
         android:text="alc.8.0%"
-        android:textColor="#45C8C9"
+        android:textColor="#9400D3"
         android:id="@+id/tvABV"
         android:layout_marginTop="4dp"
         android:layout_alignParentTop="true"

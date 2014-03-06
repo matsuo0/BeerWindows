@@ -13,6 +13,17 @@ public class BeerInfo {
     private String abv;
     private String context;
 
+    public int getImageResouce() {
+        return imageResouce;
+    }
+
+    public void setImageResouce(int imageResouce) {
+        this.imageResouce = imageResouce;
+    }
+
+    // getImageResouce
+    private int imageResouce;
+
     public String getImgUrl() {
         return imgUrl;
     }

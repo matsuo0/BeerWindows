@@ -28,6 +28,7 @@ public class ADPagerAdapter extends FragmentStatePagerAdapter {
         mStrings.add("No.1 Fragment");
         mStrings.add("No.2 Fragment");
         mStrings.add("No.3 Fragment");
+        mStrings.add("No.4 Fragment");
 /*
         mShops = new ArrayList<Shop>();
         prefs = PreferenceManager

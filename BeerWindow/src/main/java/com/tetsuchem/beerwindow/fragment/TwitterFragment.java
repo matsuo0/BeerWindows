@@ -308,7 +308,7 @@ public class TwitterFragment extends Fragment {
         AsyncTask<Void, Void, List<Status>> task = new AsyncTask<Void, Void, List<Status>>() {
             @Override
             protected List<twitter4j.Status> doInBackground(Void... params) {
-                Log.d(TAG, "doInBackground()--Start");
+                // Log.d(TAG, "doInBackground()--Start");
                 try {
                     Query query = new Query();
                     //1度のリクエストで取得するTweetの数(100が最大)
@@ -334,7 +334,7 @@ public class TwitterFragment extends Fragment {
                         for (HashtagEntity hashTags : hashtagEntity){
                             if (hashTags.getText().equals(hashTag)){
                                 adapter.add(status);
-                                Log.d(TAG, status.getCreatedAt().toLocaleString() + "-" + status.getText());
+                                // Log.d(TAG, status.getCreatedAt().toLocaleString() + "-" + status.getText());
                             }
                         }
                        // Log.d(TAG, status.getCreatedAt().toLocaleString() + "-" + status.getText());

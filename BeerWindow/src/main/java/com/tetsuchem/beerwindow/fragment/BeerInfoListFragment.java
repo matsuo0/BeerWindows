@@ -111,13 +111,10 @@ public class BeerInfoListFragment extends Fragment {
 
         TestDataBeerList testDataBeerList = new TestDataBeerList();
         beerInfoList.clear();
-        beerInfoList.add(testDataBeerList.getBeerInfo());
-        beerInfoList.add(testDataBeerList.getBeerInfo());
-        beerInfoList.add(testDataBeerList.getBeerInfo());
-        beerInfoList.add(testDataBeerList.getBeerInfo());
-        beerInfoList.add(testDataBeerList.getBeerInfo());
-        beerInfoList.add(testDataBeerList.getBeerInfo());
-        beerInfoList.add(testDataBeerList.getBeerInfo());
+        beerInfoList.add(testDataBeerList.getBeerInfo_Lager());
+        beerInfoList.add(testDataBeerList.getBeerInfo_Ale());
+        beerInfoList.add(testDataBeerList.getBeerInfo_BlownAle());
+        beerInfoList.add(testDataBeerList.getBeerInfo_Porter());
         adapter = new BeerInfosAdapter(getActivity().getApplicationContext(), beerInfoList);
         lvBeerInfos.setAdapter(adapter);
 
@@ -154,6 +151,7 @@ public class BeerInfoListFragment extends Fragment {
 
                 // Icon
                 holder.vIcon = (ImageView) convertView.findViewById(R.id.ivIcon);
+                holder.vIcon.setImageResource(R.drawable.beer_lager);
 
                 // Style
                 holder.vStyle = (TextView) convertView.findViewById(R.id.tvStyle);
@@ -182,9 +180,8 @@ public class BeerInfoListFragment extends Fragment {
 
             final BeerInfo beerInfo = this.getItem(position);
             if (beerInfo != null) {
-
-                //holder.vIcon.setImageDrawable();
-                holder.vStyle.setText(beerInfo.getStyle());
+                holder.vIcon.setImageResource(beerInfo.getImageResouce());
+                holder.vStyle.setText("(" + beerInfo.getStyle() + ")");
                 holder.vBrewery.setText(beerInfo.getBrewer());
                 holder.vName.setText(beerInfo.getName());
                 holder.vContent.setText(beerInfo.getContext());

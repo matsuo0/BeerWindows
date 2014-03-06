@@ -13,18 +13,22 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 import com.tetsuchem.beerwindow.fragment.BeerInfoListFragment;
 import com.tetsuchem.beerwindow.fragment.TwitterFragment;
 import java.util.Locale;
 
 public class BeerWindowActivity extends FragmentActivity {
+
+    private static String TAG = BeerWindowActivity.class.getName();
 
     SectionsPagerAdapter mSectionsPagerAdapter;
     ViewPager mViewPager;
@@ -41,7 +45,10 @@ public class BeerWindowActivity extends FragmentActivity {
         public void run() {
             if (!pagerMoved) {
                 if (mViewPager != null){
-                    if (mViewPager.getCurrentItem() == mViewPager.getChildCount()){
+                    Log.d(TAG, "mViewPager.getCurrentItem() : " + String.valueOf(mViewPager.getCurrentItem()));
+                    Log.d(TAG, "mViewPager.getChildCount() : " + String.valueOf(mViewPager.getChildCount()));
+                    Log.d(TAG, "mSectionsPagerAdapter.getCount() : " + String.valueOf(mSectionsPagerAdapter.getCount()));
+                    if (mViewPager.getCurrentItem() == mSectionsPagerAdapter.getCount() - 1){
                         mViewPager.setCurrentItem(0, true);
                     } else {
                         mViewPager.setCurrentItem(mViewPager.getCurrentItem()+1, true);
@@ -51,7 +58,6 @@ public class BeerWindowActivity extends FragmentActivity {
                     mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
                     mViewPager.setAdapter(mSectionsPagerAdapter);
                 }
-                //h.postDelayed(animateViewPager, ANIM_VIEWPAGER_DELAY);
                 h.postDelayed(animateViewPager, scrollTime);
 
             }
@@ -149,24 +155,6 @@ public class BeerWindowActivity extends FragmentActivity {
 
     }
 
-    /*
-    // Twitterの表示
-    public static class TwitterFragment extends Fragment {
-
-        public TwitterFragment(){
-
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            return rootView;
-        }
-
-    }
-    */
-
     // BeerInfoの表示
     public static class BeerInfoFragment extends Fragment {
 
@@ -197,13 +185,14 @@ public class BeerWindowActivity extends FragmentActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
+            Log.d(TAG, "Fragment position : " + String.valueOf(position));
             return PlaceholderFragment.newInstance(position + 1);
         }
 
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 4;
         }
 
         @Override
@@ -217,8 +206,11 @@ public class BeerWindowActivity extends FragmentActivity {
                     //return getString(R.string.title_section2).toUpperCase(l);
                     return "Selection No.2";
                 case 2:
-                    //return getString(R.string.title_section3).toUpperCase(l);
+                    //return getString(R.string.title_section4).toUpperCase(l);
                     return "Selection No.3";
+                case 3:
+                    //return getString(R.string.title_section3).toUpperCase(l);
+                    return "Selection No.4";
             }
             return null;
         }
@@ -253,9 +245,20 @@ public class BeerWindowActivity extends FragmentActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
+
+            View rootView = inflater.inflate(R.layout.fragment_ad01, container, false);
+
+            ImageView imageView = (ImageView)rootView.findViewById(R.id.imageView);
+
+            Log.d(TAG, "PlaceholderFragment onCreateView : " + Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
+
+            switch (Integer.valueOf(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)))) {
+                case 1:imageView.setImageResource(R.drawable.periodic_table_beer_styles); break;
+                case 2:imageView.setImageResource(R.drawable.the_web_of_beer_styles); break;
+                case 3:imageView.setImageResource(R.drawable.beer_colours); break;
+                case 4:imageView.setImageResource(R.drawable.hash_tag_info); break;
+                default:;break;
+            }
             return rootView;
         }
     }
